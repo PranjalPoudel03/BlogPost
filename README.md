@@ -30,3 +30,8 @@
 5. [x]   A post that a user previously created can be edited or deleted from its post pages
             After a user creates a new post, they can go back and edit the post
             A previously created post can be deleted from its post page
+
+
+# Stretch Features
+
+1. [x]  Web app displays a loading animation whenever data is being fetched
