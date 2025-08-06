@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "./client";
 import { Link } from "react-router-dom";
 
-export default function HomePage() {
+export default function Home() {
   const [opinions, setOpinions] = useState([]);
 
   useEffect(() => {

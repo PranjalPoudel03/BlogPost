@@ -6,8 +6,17 @@ export default function DeletePost() {
   const navigate = useNavigate();
 
   async function handleDelete() {
-    const { error } = await supabase.from("opinions").delete().eq("id", id);
-    if (!error) navigate("/");
+    const { error } = await supabase
+      .from("opinions")
+      .delete()
+      .eq("id", id);
+
+    if (error) {
+      console.error("Delete error:", error);
+      alert("Error deleting post: " + error.message);
+    } else {
+      navigate("/");
+    }
   }
 
   return (

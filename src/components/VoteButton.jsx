@@ -1,15 +1,30 @@
+import { useState, useEffect } from "react";
 import { supabase } from "../client";
-import { useState } from "react";
 
 export default function VoteButton({ opinionId, currentVotes }) {
   const [votes, setVotes] = useState(currentVotes);
 
+  // ✅ Sync with parent prop if it changes (real-time updates)
+  useEffect(() => {
+    setVotes(currentVotes);
+  }, [currentVotes]);
+
   async function handleVote() {
-    const { error } = await supabase
-      .from("votes")
-      .insert([{ opinion_id: opinionId, vote_type: 1 }]);
-    if (!error) setVotes(votes + 1);
+    const { data, error } = await supabase
+      .from("opinions")
+      .update({ upvotes: votes + 1 })
+      .eq("id", opinionId);
+
+    if (!error) {
+      setVotes(votes + 1);
+    } else {
+      console.error("Vote update error:", error);
+    }
   }
 
-  return <button onClick={handleVote}>👍 {votes}</button>;
+  return (
+    <button className="vote-btn" onClick={handleVote}>
+      👍 {votes}
+    </button>
+  );
 }

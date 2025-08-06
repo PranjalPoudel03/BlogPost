@@ -1,0 +1,107 @@
+.profile-container {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile-email {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+ .profile-opinions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+  padding: 20px 0;
+
+} 
+
+
+/* ✅ Match homepage card style */
+.profile-opinion-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-opinion-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-opinion-title {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.profile-opinion-body {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.login-message {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.no-opinions {
+  font-size: 1rem;
+  color: #777;
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+/* ✅ Edit & Delete buttons */
+.card-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #0077ff;
+}
+
+.delete-btn {
+  background-color: #dc2626;
+}
+
+.edit-btn:hover {
+  background-color: #005fbb;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
+}

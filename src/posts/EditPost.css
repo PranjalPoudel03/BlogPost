@@ -1,0 +1,56 @@
+
+.edit-post-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+  padding-top: 60px; /* pushes below navbar */
+  background-color: rgb(209, 238, 168);
+}
+
+.edit-post-card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.edit-post-card h2 {
+  margin-bottom: 20px;
+}
+
+.edit-post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.edit-post-form input,
+.edit-post-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.edit-post-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.update-btn {
+  background-color: #0077ff;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.update-btn:hover {
+  background-color: #005fbb;
+}

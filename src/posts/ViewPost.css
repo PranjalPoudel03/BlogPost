@@ -1,0 +1,66 @@
+.viewpost-container {
+
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.viewpost-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 30%;
+  max-width: 900px; 
+  
+} 
+
+.viewpost-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.viewpost-meta {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.viewpost-body {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Make image responsive and centered */
+.viewpost-image {
+  width: 50%;
+  height: auto;
+  max-width: 800px;
+  border-radius: 10px;
+  margin: 15px auto;
+  display: block;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.viewpost-vote {
+  margin-bottom: 20px;
+}
+
+.comments-container {
+  margin-top: 10px;
+}
+
+/* Fullscreen override for ViewPost page */
+/* body.viewpost-open,
+body.viewpost-open #root,
+body.viewpost-open .main-content {
+  max-width: 80% !important;
+  width: 90% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+} */
